@@ -1,0 +1,11 @@
+{
+  "name": "Student OS",
+  "short_name": "StudentOS",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#0f0f1e",
+  "theme_color": "#a855f7",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

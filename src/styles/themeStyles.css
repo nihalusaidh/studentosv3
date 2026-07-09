@@ -1,0 +1,74 @@
+@layer utilities {
+  .bg-primary {
+    background: var(--bg-primary);
+  }
+  .bg-secondary {
+    background: var(--bg-secondary);
+  }
+  .bg-card {
+    background: var(--bg-card);
+  }
+  .bg-glass {
+    background: var(--bg-glass);
+    backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+  }
+  .text-primary {
+    color: var(--text-primary);
+  }
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+  .text-muted {
+    color: var(--text-muted);
+  }
+  .accent {
+    color: var(--accent);
+  }
+  .accent-bg {
+    background: var(--accent);
+  }
+  .accent-border {
+    border-color: var(--accent);
+  }
+  .gradient-text {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gradient-bg {
+    background: var(--gradient);
+  }
+  .shadow-theme {
+    box-shadow: var(--shadow);
+  }
+  .shadow-theme-lg {
+    box-shadow: var(--shadow-lg);
+  }
+  .border-theme {
+    border-color: var(--border-color);
+  }
+  .bg-hover:hover {
+    background: var(--hover-bg);
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--card-radius, 16px);
+    box-shadow: var(--shadow);
+  }
+
+  .glass-card {
+    background: var(--bg-glass);
+    backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--card-radius, 16px);
+    box-shadow: var(--shadow);
+  }
+
+  .glass-card:hover {
+    box-shadow: var(--shadow-lg);
+  }
+}

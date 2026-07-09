@@ -1,0 +1,159 @@
+/* ===== PER-THEME DESIGN OVERRIDES ===== */
+
+/* ── Hero Layouts ── */
+[data-theme="neon"] .habits-hero {
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 0, 128, 0.2);
+  box-shadow: 0 0 60px rgba(255, 0, 128, 0.1), inset 0 0 60px rgba(0, 245, 255, 0.05);
+}
+[data-theme="neon"] .habits-hero-ring { filter: drop-shadow(0 0 15px rgba(255, 0, 128, 0.4)); }
+
+[data-theme="ocean"] .habits-hero {
+  border-bottom: 2px solid rgba(6, 182, 212, 0.2);
+}
+[data-theme="ocean"] .habits-hero::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 4px; background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.3;
+}
+
+[data-theme="minimal"] .habits-hero {
+  background: var(--bg-secondary) !important;
+  border: 0.5px solid var(--border-color);
+  box-shadow: none !important;
+  padding: 12px 16px !important;
+}
+[data-theme="minimal"] .habits-hero-ring { display: none; }
+[data-theme="minimal"] .habits-hero-greeting { font-size: 0.8rem; font-weight: 400; }
+[data-theme="minimal"] .habits-hero-stats { gap: 12px; }
+[data-theme="minimal"] .habits-hero-stat { font-size: 0.75rem; }
+
+[data-theme="retro"] .habits-hero {
+  background: var(--bg-secondary) !important;
+  border: 2px solid var(--accent) !important;
+  box-shadow: 4px 4px 0 var(--accent) !important;
+  border-radius: 0 !important;
+}
+[data-theme="retro"] .habits-hero-ring { filter: sepia(0.5) hue-rotate(-10deg); }
+[data-theme="retro"] .gradient-bg { background: var(--accent) !important; }
+
+[data-theme="forest"] .habits-hero {
+  border: 1px solid rgba(34, 197, 94, 0.15);
+}
+[data-theme="forest"] .habits-hero-ring { filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.3)); }
+
+/* ── Card Styling ── */
+[data-theme="minimal"] .glass-card,
+[data-theme="minimal"] .card {
+  border: 0.5px solid var(--border-color) !important;
+  box-shadow: var(--card-shadow) !important;
+  background: var(--bg-card) !important;
+}
+
+[data-theme="academic"] .glass-card,
+[data-theme="academic"] .card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+[data-theme="retro"] .glass-card,
+[data-theme="retro"] .card {
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 2px 2px 0 rgba(217, 170, 110, 0.2) !important;
+}
+
+[data-theme="neon"] .glass-card,
+[data-theme="neon"] .card {
+  border: none !important;
+  box-shadow: 0 0 30px rgba(255, 0, 128, 0.08) !important;
+  backdrop-filter: blur(24px);
+}
+
+[data-theme="ocean"] .glass-card,
+[data-theme="ocean"] .card {
+  border: 1px solid rgba(6, 182, 212, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.06) !important;
+}
+
+/* ── Active Nav / Gradient BG ── */
+[data-theme="minimal"] .gradient-bg {
+  background: var(--accent) !important;
+}
+
+[data-theme="academic"] .gradient-bg {
+  background: var(--gradient) !important;
+}
+
+/* ── Buttons ── */
+[data-theme="retro"] button.gradient-bg {
+  background: var(--accent) !important;
+  border: 2px solid var(--accent-3);
+  border-radius: 0 !important;
+  box-shadow: 2px 2px 0 var(--accent-3);
+}
+[data-theme="retro"] button.gradient-bg:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+[data-theme="minimal"] button.gradient-bg {
+  background: var(--accent) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+[data-theme="neon"] button.gradient-bg {
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.3) !important;
+}
+
+/* ── SVG Charts ── */
+[data-theme="retro"] .habits-chart text { font-family: 'Courier New', monospace !important; }
+[data-theme="retro"] .habits-chart line { stroke-dasharray: 2, 2 !important; }
+[data-theme="retro"] .habits-chart circle { fill: var(--accent) !important; stroke: none !important; }
+
+[data-theme="neon"] .habits-chart line { opacity: 0.3; }
+[data-theme="neon"] .habits-chart text { fill: rgba(240, 240, 255, 0.5); font-size: 8px; }
+
+[data-theme="ocean"] .habits-chart { border-bottom: 1px solid rgba(6, 182, 212, 0.1); }
+
+/* ── Badges ── */
+[data-theme="minimal"] .badge { border-radius: 2px !important; font-weight: 400; }
+[data-theme="retro"] .badge { border-radius: 0 !important; font-family: 'Courier New', monospace; }
+[data-theme="neon"] .badge { border-radius: 8px !important; box-shadow: 0 0 10px rgba(255, 0, 128, 0.2); }
+
+/* ── Light Theme Tailwind Dark Overrides ── */
+@media (prefers-color-scheme: dark) {
+  [data-theme="academic"] [class*="dark:bg-"],
+  [data-theme="minimal"] [class*="dark:bg-"] {
+    background-color: var(--bg-card) !important;
+  }
+  [data-theme="academic"] [class*="dark:border-"],
+  [data-theme="minimal"] [class*="dark:border-"] {
+    border-color: var(--border-color) !important;
+  }
+  [data-theme="academic"] [class*="dark:text-"],
+  [data-theme="minimal"] [class*="dark:text-"] {
+    color: var(--text-primary) !important;
+  }
+  [data-theme="academic"] [class*="dark:hover:bg-"]:hover,
+  [data-theme="minimal"] [class*="dark:hover:bg-"]:hover {
+    background-color: var(--hover-bg) !important;
+  }
+}
+
+/* ── Tab Navigation ── */
+[data-theme="neon"] .tab-active {
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.2), inset 0 0 20px rgba(255, 0, 128, 0.05) !important;
+}
+
+[data-theme="minimal"] .tab-active {
+  box-shadow: none !important;
+  border: 0.5px solid var(--border-color) !important;
+}
+
+[data-theme="retro"] .tab-active {
+  box-shadow: none !important;
+  border: 1px solid var(--accent) !important;
+  border-radius: 0 !important;
+}
