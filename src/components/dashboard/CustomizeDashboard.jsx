@@ -46,8 +46,8 @@ export default function CustomizeDashboard({ isOpen, onClose, onSave }) {
           {widgets.map((w, i) => (
             <div key={w.id} className="flex items-center gap-2 p-2 rounded-lg bg-[var(--bg-secondary)]">
               <div className="flex flex-col gap-0.5">
-                <button onClick={() => moveUp(i)} className="p-0.5 rounded hover:bg-hover text-muted hover:text-primary cursor-pointer border-0 bg-transparent leading-none text-[8px]">▲</button>
-                <button onClick={() => moveDown(i)} className="p-0.5 rounded hover:bg-hover text-muted hover:text-primary cursor-pointer border-0 bg-transparent leading-none text-[8px]">▼</button>
+                <button onClick={() => moveUp(i)} className="p-1 rounded hover:bg-hover text-muted hover:text-primary cursor-pointer border-0 bg-transparent leading-none text-[10px]">▲</button>
+                <button onClick={() => moveDown(i)} className="p-1 rounded hover:bg-hover text-muted hover:text-primary cursor-pointer border-0 bg-transparent leading-none text-[10px]">▼</button>
               </div>
               <span className="text-xs text-muted flex-1">{w.label}</span>
               <button onClick={() => handleToggle(w.id)}

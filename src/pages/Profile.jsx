@@ -91,7 +91,7 @@ export default function Profile() {
         {activeTab === 'history' && (
           <>
             {history.length > 0 && (
-              <div className="grid grid-cols-3 gap-4 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
                   <p className="text-2xl font-bold text-gray-900 dark:text-white">{history.length}</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">Semesters</p>
@@ -156,7 +156,7 @@ export default function Profile() {
                           </svg>
                           <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-gray-900 dark:text-white">{h.stats.percentage}%</span>
                         </div>
-                        <div className="grid grid-cols-3 gap-x-4 gap-y-1 text-xs flex-1">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-1 text-xs flex-1">
                           <div className="flex items-center gap-1 text-green-600 dark:text-green-400">
                             <CheckCircle2 size={12} /> P: {h.stats.presentCount}
                           </div>

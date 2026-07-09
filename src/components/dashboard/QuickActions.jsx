@@ -16,7 +16,7 @@ export default function QuickActions() {
   return (
     <div>
       <h3 className="text-sm font-semibold text-primary mb-3">Quick Actions</h3>
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
         {actions.map(({ path, label, icon: Icon, color }) => (
           <button
             key={path}

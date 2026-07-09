@@ -49,8 +49,8 @@ export default function NotificationPanel({ isOpen, onClose }) {
       <div className="flex items-center justify-between p-3 border-b border-[var(--border-color)]">
         <h3 className="text-sm font-semibold text-primary">Notifications</h3>
         <div className="flex items-center gap-1">
-          {unreadCount > 0 && <button onClick={markAllRead} className="p-1 rounded hover:bg-hover text-muted hover:text-primary cursor-pointer border-0 bg-transparent" title="Mark all read"><CheckCheck size={14} /></button>}
-          <button onClick={clearAll} className="p-1 rounded hover:bg-hover text-muted hover:text-red-400 cursor-pointer border-0 bg-transparent" title="Clear all"><X size={14} /></button>
+          {unreadCount > 0 && <button onClick={markAllRead} className="p-1.5 rounded hover:bg-hover text-muted hover:text-primary cursor-pointer border-0 bg-transparent" title="Mark all read"><CheckCheck size={14} /></button>}
+          <button onClick={clearAll} className="p-1.5 rounded hover:bg-hover text-muted hover:text-red-400 cursor-pointer border-0 bg-transparent" title="Clear all"><X size={14} /></button>
         </div>
       </div>
       <div className="overflow-y-auto max-h-72">

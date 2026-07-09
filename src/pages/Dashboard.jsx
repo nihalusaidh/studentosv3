@@ -248,7 +248,7 @@ export default function Dashboard() {
           <Megaphone size={16} className="text-amber-400 mt-0.5 shrink-0" />
           <p className="text-sm text-primary flex-1">{a.message}</p>
           <button onClick={() => setDismissed(prev => new Set([...prev, a.id]))}
-            className="p-0.5 rounded hover:bg-black/10 text-muted cursor-pointer border-0 bg-transparent">
+            className="p-1.5 rounded hover:bg-black/10 text-muted cursor-pointer border-0 bg-transparent">
             <X size={14} />
           </button>
         </div>

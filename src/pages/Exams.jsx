@@ -133,8 +133,8 @@ export default function Exams() {
                         </div>
                         <div className="flex items-center gap-2 flex-shrink-0">
                           {cd && <Badge variant={cd.urgent ? 'danger' : cd.days <= 14 ? 'warning' : 'default'}>{cd.label}</Badge>}
-                          <button onClick={(e) => { e.stopPropagation(); handleEdit(exam) }} className="p-1 rounded hover:bg-hover text-muted hover:text-primary cursor-pointer border-0 bg-transparent"><Edit3 size={12} /></button>
-                          <button onClick={(e) => { e.stopPropagation(); handleDelete(exam.id) }} className="p-1 rounded hover:bg-hover text-muted hover:text-red-400 cursor-pointer border-0 bg-transparent"><Trash2 size={12} /></button>
+                          <button onClick={(e) => { e.stopPropagation(); handleEdit(exam) }} className="p-1.5 rounded hover:bg-hover text-muted hover:text-primary cursor-pointer border-0 bg-transparent"><Edit3 size={14} /></button>
+                          <button onClick={(e) => { e.stopPropagation(); handleDelete(exam.id) }} className="p-1.5 rounded hover:bg-hover text-muted hover:text-red-400 cursor-pointer border-0 bg-transparent"><Trash2 size={14} /></button>
                         </div>
                       </div>
                       <div className="flex items-center gap-3 mt-1.5 text-[11px] text-muted">

@@ -1,17 +1,15 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { Menu, Bell, Sun, Moon } from 'lucide-react'
 import { useTheme } from '../../contexts/ThemeContext'
 import { useNotifications } from '../../contexts/NotificationContext'
 import NotificationPanel from '../dashboard/NotificationPanel'
 
-const LIGHT_THEMES = ['academic', 'minimal']
+const LIGHT_THEMES = ['academic', 'minimal', 'sunrise', 'lavender', 'fresh']
 
 export default function MobileHeader({ onMenuClick }) {
   const { currentThemeId, changeTheme } = useTheme()
   const { unreadCount } = useNotifications()
   const [showNotif, setShowNotif] = useState(false)
-  const navigate = useNavigate()
 
   const isLight = LIGHT_THEMES.includes(currentThemeId)
 
@@ -42,12 +40,6 @@ export default function MobileHeader({ onMenuClick }) {
             {unreadCount > 0 && <span className="absolute top-0 right-0 w-2 h-2 rounded-full bg-red-500" />}
           </button>
           <NotificationPanel isOpen={showNotif} onClose={() => setShowNotif(false)} />
-          {unreadCount > 0 && !showNotif && (
-            <button onClick={() => navigate('/notifications')}
-              className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-red-500 text-white text-[8px] font-bold flex items-center justify-center shadow-lg cursor-pointer border-0 p-0 leading-none">
-              {unreadCount > 9 ? '9+' : unreadCount}
-            </button>
-          )}
         </div>
       </div>
     </header>

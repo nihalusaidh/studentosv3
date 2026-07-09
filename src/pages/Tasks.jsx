@@ -112,7 +112,7 @@ export default function Tasks() {
         </button>
       </div>
 
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <GlassCard className="p-3 text-center">
           <p className="text-2xl font-bold gradient-text">{stats.total}</p>
           <p className="text-xs text-muted">Total</p>
@@ -179,7 +179,7 @@ export default function Tasks() {
               <motion.div key={task.id} layout initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.15 }}>
                 <GlassCard className={`p-4 group ${task.status === 'completed' ? 'opacity-60' : ''}`}>
                   <div className="flex items-start gap-3">
-                    <button onClick={() => handleToggle(task.id)} className="mt-0.5 cursor-pointer border-0 bg-transparent p-0 flex-shrink-0">
+                    <button onClick={() => handleToggle(task.id)} className="mt-0.5 cursor-pointer border-0 bg-transparent p-1 -ml-1 flex-shrink-0">
                       {task.status === 'completed' ? <CheckCircle2 size={20} className="text-green-500" /> : isOverdue ? <AlertCircle size={20} className="text-red-500" /> : <Circle size={20} className="text-muted hover:text-[var(--accent)] transition-colors" />}
                     </button>
                     <div className="flex-1 min-w-0">
