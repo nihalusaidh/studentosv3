@@ -12,6 +12,26 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      (function() {
+        var theme = localStorage.getItem('student-os-theme');
+        if (!theme) theme = 'glass';
+        document.documentElement.setAttribute('data-theme', theme);
+        var bgColors = {
+          glass: '#0f0f1e', academic: '#f8fafc', midnight: '#1e1e2e', amoled: '#000',
+          aurora: '#0a0a1a', neon: '#050510', ocean: '#0b1926', minimal: '#fafafa',
+          sunrise: '#fef7f0', lavender: '#f8f6ff', fresh: '#f0fdfa', retro: '#1a1410', forest: '#0d1f14'
+        };
+        var secColors = {
+          glass: '#1a1a2e', academic: '#f1f5f9', midnight: '#181825', amoled: '#0a0a0a',
+          aurora: '#0f0f2e', neon: '#0a0a1e', ocean: '#0d2137', minimal: '#f5f5f5',
+          sunrise: '#fdf0e0', lavender: '#f0edff', fresh: '#ccfbf1', retro: '#231e18', forest: '#122a1a'
+        };
+        var r = document.documentElement;
+        r.style.setProperty('--bg-primary', bgColors[theme] || bgColors.glass);
+        r.style.setProperty('--bg-secondary', secColors[theme] || secColors.glass);
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
